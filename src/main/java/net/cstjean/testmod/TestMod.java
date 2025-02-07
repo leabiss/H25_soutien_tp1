@@ -1,6 +1,7 @@
 package net.cstjean.testmod;
 
 import com.mojang.logging.LogUtils;
+import net.cstjean.testmod.block.ModBlocks;
 import net.cstjean.testmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -32,6 +33,7 @@ public class TestMod
         MinecraftForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
     }
@@ -47,6 +49,11 @@ public class TestMod
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.RUBBER_DUCK);
             event.accept(ModItems.BLUE_RUBBER_DUCK);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.ALEXANDRITE_BLOCK);
+            event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
         }
     }
 
