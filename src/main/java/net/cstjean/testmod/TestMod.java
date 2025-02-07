@@ -2,6 +2,7 @@ package net.cstjean.testmod;
 
 import com.mojang.logging.LogUtils;
 import net.cstjean.testmod.block.ModBlocks;
+import net.cstjean.testmod.item.ModCreativeModeTabs;
 import net.cstjean.testmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -32,6 +33,7 @@ public class TestMod
 
         MinecraftForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
@@ -45,16 +47,6 @@ public class TestMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        // Add the item to the ingredient tab in the creative menu
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.RUBBER_DUCK);
-            event.accept(ModItems.BLUE_RUBBER_DUCK);
-        }
-
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.ALEXANDRITE_BLOCK);
-            event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
-        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
