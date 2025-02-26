@@ -3,11 +3,12 @@
   "item.test_mod_soutien.blue_rubber_duck": "Blue Rubber Ducky",
   "item.test_mod_soutien.alexandrite": "Alexandrite",
   "item.test_mod_soutien.raw_alexandrite": "Raw Alexandrite",
+  "item.test_mod_soutien.chisel": "Chisel",
 
   "block.test_mod_soutien.alexandrite_block": "Block of Alexandrite",
   "block.test_mod_soutien.raw_alexandrite_block": "Block of Raw Alexandrite",
 
   "creativetab.test_mod_soutien.quack_items": "Quack",
   "creativetab.test_mod_soutien.alexandrite_items": "Alexandrite Items",
-  "creativetab.test_mod_soutien.alexandrite_blocks": "Alexandrite Blocks"
+  "creativetab.test_mod_soutien.alexandrite_blocks": "Alexandrite Blocks",
 }
