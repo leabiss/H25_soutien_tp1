@@ -32,7 +32,10 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.ALEXANDRITE.get());
                         output.accept(ModItems.RAW_ALEXANDRITE.get());
+
                         output.accept(ModItems.CHISEL.get());
+
+                        output.accept(ModItems.ALEXANDRITE_HELMET.get());
                     })
                     .build());
 

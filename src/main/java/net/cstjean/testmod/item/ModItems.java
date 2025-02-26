@@ -1,6 +1,7 @@
 package net.cstjean.testmod.item;
 
 import net.cstjean.testmod.item.custom.ChiselItem;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -28,6 +29,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel",
             () -> new ChiselItem(new Item.Properties().durability(32)));
+
+    public static final RegistryObject<Item> ALEXANDRITE_HELMET = ITEMS.register("alexandrite_helmet",
+                () -> new ArmorItem(ModArmorMaterials.ALEXANDRITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                        new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(18))));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
