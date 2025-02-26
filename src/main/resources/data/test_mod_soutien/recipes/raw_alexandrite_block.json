@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "alexandrite",
+  "key": {
+    "#": {
+      "item": "test_mod_soutien:raw_alexandrite"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "test_mod_soutien:raw_alexandrite_block"
+  }
+}

@@ -2,9 +2,11 @@ package net.cstjean.testmod.block;
 
 import net.cstjean.testmod.TestMod;
 import net.cstjean.testmod.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -28,9 +30,21 @@ public class ModBlocks {
     // Does not make it drop yet
     public static final RegistryObject<Block> RAW_ALEXANDRITE_BLOCK = registerBlock("raw_alexandrite_block",
             () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3f)
+                    .requiresCorrectToolForDrops()));
+
+    // Does not make it drop yet
+    public static final RegistryObject<Block> ALEXANDRITE_ORE = registerBlock("alexandrite_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
                     .strength(4f)
+                    .requiresCorrectToolForDrops()));
+
+    // Does not make it drop yet
+    public static final RegistryObject<Block> ALEXANDRITE_DEEPSLATE_ORE = registerBlock("alexandrite_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3, 6),BlockBehaviour.Properties.of()
+                    .strength(5f)
                     .requiresCorrectToolForDrops()
-                    .sound(SoundType.AMETHYST)));
+                    .sound(SoundType.DEEPSLATE)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
