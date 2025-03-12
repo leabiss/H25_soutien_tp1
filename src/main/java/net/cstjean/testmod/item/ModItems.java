@@ -1,8 +1,9 @@
 package net.cstjean.testmod.item;
 
+import net.cstjean.testmod.item.armor.HelmetTestArmorItem;
 import net.cstjean.testmod.item.custom.ChiselItem;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -39,8 +40,12 @@ public class ModItems {
 //            () -> new ArmorItem(ModArmorMaterials.ALEXANDRITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
 //                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(18))));
 
+//    public static final RegistryObject<Item> MINING_HELMET = ITEMS.register("mining_helmet",
+//            () -> new ArmorItem(ModArmorMaterials.MINING_HELMET_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(18))));
+
     public static final RegistryObject<Item> MINING_HELMET = ITEMS.register("mining_helmet",
-            () -> new ArmorItem(ModArmorMaterials.MINING_HELMET_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(18))));
+            () -> new HelmetTestArmorItem(ModArmorMaterials.MINING_HELMET_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
