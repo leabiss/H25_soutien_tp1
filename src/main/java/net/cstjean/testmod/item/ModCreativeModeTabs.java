@@ -36,6 +36,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CHISEL.get());
 
                         output.accept(ModItems.ALEXANDRITE_HELMET.get());
+                        output.accept(ModItems.MINING_HELMET.get());
                     })
                     .build());
 
