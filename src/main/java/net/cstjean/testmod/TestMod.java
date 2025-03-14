@@ -3,7 +3,7 @@ package net.cstjean.testmod;
 import com.mojang.logging.LogUtils;
 import net.cstjean.testmod.block.ModBlocks;
 import net.cstjean.testmod.item.ModCreativeModeTabs;
-import net.cstjean.testmod.item.ModItemModels;
+//import net.cstjean.testmod.item.ModItemModels;
 import net.cstjean.testmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -63,7 +63,7 @@ public class TestMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            ModItemModels.
+//            ModItemModels.
         }
     }
 }
